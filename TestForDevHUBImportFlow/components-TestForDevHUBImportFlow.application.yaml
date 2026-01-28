@@ -1,0 +1,27 @@
+# Debug inputs
+#       application_folder: "TestForDevHUBImportFlow"
+#              application: "TestForDevHUBImportFlow.application"
+#               bw6_system: "car-order-system"
+#         bw6_project_name: "TestForDevHUBImportFlow"
+#  bw6_project_description: ""
+#     bw6_project_manifest: ["Manifest-Version: 1.0","Manifest-Version: 1.0",""]
+# bw6_project_dependencies: []
+#                  repoUrl: "github.com?owner=wibowosaroyo&repo=ImportFlowsRepo"
+#                    owner: "group:default/tibco-imported"
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+    name: TestForDevHUBImportFlow
+    tags:
+      - bw6-project
+    links:
+      - title: Business Works 6
+        url: https://docs.tibco.com/products/tibco-activematrix-businessworks-6-10-0
+    annotations:
+      github.com/project-slug: https://github.com/wibowosaroyo/ImportFlowsRepo
+spec:
+    type: bw-6-project
+    lifecycle: production
+    owner: group:default/tibco-imported
+    system: car-order-system
